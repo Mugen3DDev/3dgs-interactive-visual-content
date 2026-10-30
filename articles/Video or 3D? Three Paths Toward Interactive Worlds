@@ -1,0 +1,131 @@
+# Video or 3D? Three Paths Toward Interactive Worlds
+
+*An Sumeru AI perspective on world models, spatial generation, and reusable 3D assets*
+
+Video and 3D are beginning to converge around a new question:
+
+> Can visual content become a world that people can enter, explore, and reuse?
+
+Video is an effective way to present a fixed sequence of images. 3D provides a persistent spatial representation that can be viewed from different angles and used in interactive applications. Recent work in world models is bringing these ideas closer together, though different systems approach the problem from different directions.
+
+This article looks at three approaches:
+
+- **Atlas** explores spatially conditioned generation, reconstruction, and simulation.
+- **Genie 3** generates environments that users can navigate in real time.
+- **Mugen3D** focuses on generating reusable 3D assets for applications.
+
+These systems have different goals and output workflows. The comparison here is based on publicly described capabilities, not a standardized performance evaluation.
+
+## 1. Video is more than image quality
+
+Traditional 3D production can be expensive and technically demanding. In return, 3D scenes can support camera movement, interaction, and asset reuse. They are common in games, visual effects, virtual production, and design.
+
+Video is easier to distribute and works well for presenting a finished sequence. But once rendered, it is difficult to change the camera, manipulate individual objects, or turn the scene into an interactive environment.
+
+Generative video has made realistic footage easier to create. Yet long-term consistency, precise camera control, extended duration, and real-time interaction remain active challenges.
+
+The distinction is not simply “video versus 3D.” It is also a question of what the system produces:
+
+- a sequence of frames;
+- a navigable generated environment;
+- or a set of 3D assets that can be integrated into an application.
+
+## 2. Two ways to make visual content explorable
+
+A **video-first** approach generates new visual content as the camera or timeline advances. It needs to maintain consistency while responding to camera instructions and user actions.
+
+A **3D-first** approach creates a spatial representation that can be rendered from multiple viewpoints. This can make camera control and asset reuse more direct, but it brings its own challenges: asset quality, animation, memory use, compression, and deployment on target hardware.
+
+These approaches move complexity to different parts of the pipeline. Video-first systems focus heavily on generation during playback or interaction. 3D-first systems put more emphasis on building useful assets and running them efficiently.
+
+Neither route is automatically better for every project. The right choice depends on whether a team needs generated imagery, an explorable world, or editable assets inside an application.
+
+## 3. Atlas: spatial context for generation and reconstruction
+
+World Labs describes Atlas as a world model that works with text, images, video, and 3D data in a shared spatial context. Its announced workflows include camera-controlled image and video generation, reconstruction from images, and space-time simulation. World Labs also says Atlas can produce explicit 3D outputs, including point clouds and 3D Gaussian splats.
+
+That makes Atlas relevant to workflows where creators want to guide a camera through a scene or generate new views from sparse visual references. It also connects spatial understanding with outputs intended for areas such as visual effects, games, and robotics.
+
+A spatially controlled video and a reusable 3D scene are still different deliverables. A video workflow is organized around a timeline. A 3D workflow can expose scene elements for repeated rendering, editing, or interaction, depending on the tools and output format.
+
+Atlas’s public description presents both video and explicit 3D outputs. Teams evaluating it should check which output mode fits their pipeline and what editing or runtime steps are required afterward.
+
+Source: [Atlas: A World Model for Spatial Intelligence](https://www.worldlabs.ai/blog/atlas)
+
+## 4. Genie 3: a generated world that responds to movement
+
+Google DeepMind describes Genie 3 as a general-purpose world model that generates environments users can navigate in real time. Its announcement describes generation at 24 frames per second and 720p, with consistency maintained for a few minutes.
+
+The interaction loop is different from watching a completed video:
+
+1. The user moves or changes direction.
+2. The system predicts what should appear next.
+3. The environment is generated in response to that movement.
+
+This makes Genie 3 relevant to interactive world generation and research on embodied agents. Google DeepMind’s announcement also discusses limitations, including the duration of consistent interaction and the complexity of some actions and multi-agent interactions.
+
+In January 2026, Google introduced Project Genie as an experimental web prototype powered by Genie 3, Nano Banana Pro, and Gemini. Project Genie offers a product experience for creating, exploring, and remixing interactive worlds. It should be understood as a prototype built around Genie 3, rather than as a synonym for the underlying research model.
+
+The public descriptions emphasize navigating generated environments. Teams that need independently editable assets should separately evaluate what export and integration workflows are available for their use case.
+
+Sources:
+
+- [Genie 3: A new frontier for world models](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/)
+- [Project Genie: Experimenting with infinite, interactive worlds](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/)
+
+## 5. Mugen3D: building around reusable assets
+
+Mugen3D takes an asset-oriented approach. Instead of generating every frame during interaction, the workflow starts with 3D representations that can be used in real-time applications.
+
+The product direction at Sumeru AI includes generating 3D assets from images, creating scenes from visual inputs, and developing animation and interaction workflows for digital humans. The intended pipeline is:
+
+1. Generate a 3D asset or scene.
+2. Add animation, dialogue, or application logic.
+3. Render and interact with the content in a target environment.
+
+A reusable asset can potentially support multiple camera views and application contexts. Its usefulness depends on whether the generated representation meets the project’s requirements for appearance, animation, editing, and runtime performance.
+
+There are also practical limits. From a single image, unseen surfaces must be inferred. Small text and logos, reflective or transparent materials, and complex geometry may need review or additional production work. Generated assets should be evaluated against the target application rather than assumed to be production-ready for every task.
+
+Mugen3D’s feature descriptions and internal development results are provided by Sumeru AI and are not independent third-party benchmarks. For current product details, see [Mugen3D](https://mugen3d.ai/).
+
+## 6. Compare the workflows, not just the demos
+
+The three approaches can be summarized by the kind of work they emphasize:
+
+| Approach | Primary focus | Typical question |
+|---|---|---|
+| Atlas | Spatially conditioned generation and reconstruction | Can I generate or reconstruct views with spatial control? |
+| Genie 3 | Real-time generation of navigable environments | Can the world respond as the user moves? |
+| Mugen3D | Reusable 3D asset production and application integration | Can I use generated assets in my own real-time workflow? |
+
+This is a workflow comparison, not a ranking. Product availability, export options, and supported integrations can change, so teams should verify the current documentation before making production decisions.
+
+For interactive applications, it is also useful to measure the full runtime path: asset size, memory use, frame rate, latency, animation quality, and target-device compatibility. A compelling demo does not answer all of those questions by itself.
+
+## 7. Visual content may become something people can enter
+
+World models are expanding the range of ways people can experience generated content. A person might watch a story as a video, explore a generated environment, or interact with a digital character.
+
+These experiences may share visual ideas while relying on different representations and production pipelines. Some workflows will prioritize continuous generation. Others will need explicit 3D assets that can be edited, reused, and integrated with application logic.
+
+The boundary between video and 3D is becoming less about the appearance of the final image and more about what the content lets people do:
+
+- observe it;
+- explore it;
+- edit it;
+- reuse it;
+- or participate in it.
+
+For creators and developers, the practical question is which representation gives them the control their project needs.
+
+**Discussion:** In your workflow, what matters most: visual fidelity, camera control, asset reuse, real-time interaction, or predictable runtime performance?
+
+## Sources
+
+- World Labs, [Atlas: A World Model for Spatial Intelligence](https://www.worldlabs.ai/blog/atlas)
+- Google DeepMind, [Genie 3: A new frontier for world models](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/)
+- Google, [Project Genie: Experimenting with infinite, interactive worlds](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/)
+- Sumeru AI, [Mugen3D](https://mugen3d.ai/)
+
+*Product descriptions reflect the cited public materials. Mugen3D capability statements are provided by Sumeru AI and are not independent evaluations.*
