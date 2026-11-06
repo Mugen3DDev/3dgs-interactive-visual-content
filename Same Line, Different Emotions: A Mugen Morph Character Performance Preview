@@ -1,0 +1,40 @@
+One character image, one audio clip—and the same line expressed through different facial emotions.
+The same words can sound joyful, sad, angry, or uneasy. The words stay the same, and so does the audio, yet the character’s eyes, brows, and mouth can convey a very different feeling.
+I was fortunate to take part in an early test of Mugen Morph. For this review, I chose Phil Dunphy from Modern Family as the character. I wanted to see how his facial expressions would change when the same audio was paired with different emotion settings. I was pleased with the results, especially the way his eyes, brows, and mouth shifted to express different emotions.
+Mugen Morph is developing a workflow for image- and audio-driven character performance. Upload a character image, provide audio, and choose an emotion style to bring a still character to life. Lip movements follow the speech, while facial expressions add another layer of feeling.
+For longer passages, Mugen Morph can help maintain a natural, consistent performance from beginning to end, with expressions that carry through the delivery and keep the character engaged.
+Mugen Morph also supports responsive real-time interaction. From an emotional monologue to an impromptu conversation, characters can perform—and respond in the moment.
+In this preview, we’ll use the same line with different emotion settings to show how Mugen Morph brings different feelings to a character’s performance.
+One line. Different emotions. One character, many ways to express.
+[图片]
+
+The Technology Behind Speech-Driven Facial Animation
+Speech-driven facial animation involves coordinating facial motion over time. Mouth movements need to align with speech, the performance needs to remain continuous, and facial details need to convey different expressions.
+Research has explored these challenges from several directions. For example, FaceFormer investigates how audio context can be used to generate continuous 3D facial animation, while EmoTalk studies the relationship between speech content, emotion, and facial movement. Together, these approaches illustrate some of the technical challenges involved in speech-driven facial animation.
+This preview focuses on the relationship between an emotion setting and the resulting facial expression, using the same audio input across the examples.
+Demo Design: One Line, One Audio Clip, Seven Emotions
+For this demo, we use the same character image and the same audio clip, then select seven emotion presets: Calm, Angry, Disgust, Fear, Happy, Sad, and Surprise.
+The character image and audio remain unchanged; only the emotion setting changes. This makes it easy to compare how the character’s facial expression varies across the seven settings.
+Use the same character image
+Use the same audio clip for all seven outputs
+Seven emotions preset
+Seven generated expressions
+Mugen Morph Workflow
+Mugen Morph’s existing product materials include an audio-driven animation workflow powered by a cloud API, as well as an Unreal Engine plugin and a Unity sample project. This preview focuses on an image-and-audio-driven character expression workflow, highlighting how an emotion setting affects the resulting facial performance.
+The demo workflow:
+1. Upload a character image.
+2. Provide or upload an audio clip.
+3. Select an emotion.
+4. Generate the character’s facial performance for presentation on a Mesh, in video, or as a 3D Gaussian Splatting (3DGS) character.
+Example Use Cases
+Image- and audio-driven character expressions can support a range of content workflows, including:
+- Digital presenters: Add a character presenter to a course slide, presentation, or explainer video.
+- Courses and educational content: Create character-led lessons, training materials, and knowledge-sharing content.
+- Character performance previews: Compare how one character performs with different emotion settings.
+- Creator content: Combine a character image and audio to create expressive character-led content.
+The Character in This Demo
+This demo features Phil Dunphy. Using a familiar character helps keep the focus on the facial performance: the character and audio stay consistent while the emotion setting changes.
+This character is used solely for product testing. If you believe this use infringes your rights, please contact us for removal.
+Coming Soon
+Mugen Morph’s image- and audio-driven character expression feature is currently in development and is planned for release in mid-November. Join our community for launch updates and information about trying the feature.
+Discord: https://discord.gg/a5drEtENt
